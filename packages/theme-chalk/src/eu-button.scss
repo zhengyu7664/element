@@ -1,0 +1,81 @@
+@import "mixins/mixins";
+@import "mixins/button";
+@import "common/var";
+
+/** 颜色变量*/
+$--button-primary-font-color:#ffffff;
+$--button-primary-background-color-left:#0084ff ;
+$--button-primary-background-color-right:#46bcff ;
+$--button-danger-background-color-left:#ff0101 ;
+$--button-danger-background-color-right:#ff4e00 ;
+@mixin eu-button-variant($color,$background-color-left,$background-color-right) {
+    color: $color;
+    background: linear-gradient(90deg, $background-color-left, $background-color-right);
+    border: none;
+  
+    &:hover,
+    &:focus {
+      background:   linear-gradient(90deg, mix($--color-white, $background-color-left, $--button-hover-tint-percent), mix($--color-white, $background-color-right, $--button-hover-tint-percent));  
+      color: $color;
+    }
+    
+    &:active {
+      background: linear-gradient(90deg, mix($--color-black, $background-color-left, $--button-active-shade-percent), mix($--color-black, $background-color-right, $--button-active-shade-percent));
+      color: $color;
+      outline: none;
+    }
+  
+    &.is-active {
+      background: linear-gradient(90deg, mix($--color-black, $background-color-left, $--button-active-shade-percent), mix($--color-black, $background-color-right, $--button-active-shade-percent));
+      color: $color;
+    }
+  
+    &.is-disabled {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $--color-white;
+        background: #ccc;
+      }
+    }
+  
+    // &.is-plain {
+    //   @include button-plain($background-color);
+    // }
+}
+
+@include b(eu-button) {
+    @include m(primary) {
+        @include eu-button-variant($--color-white, $--button-primary-background-color-left ,$--button-primary-background-color-right);
+    }
+    @include m(danger) {
+        @include eu-button-variant($--color-white, $--button-danger-background-color-left ,$--button-danger-background-color-right);
+    }
+
+    @include m(text) {
+        border-color: transparent;
+        color: $--color-primary;
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    
+        &:hover,
+        &:focus {
+          color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+          border-color: transparent;
+          background-color: transparent;
+        }
+        &:active {
+          color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+          border-color: transparent;
+          background-color: transparent;
+        }
+    
+        &.is-disabled,
+        &.is-disabled:hover,
+        &.is-disabled:focus {
+          border-color: transparent;
+        }
+      }
+}
