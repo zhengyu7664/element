@@ -81,6 +81,8 @@ import { ElAvatar } from './avatar'
 import { ElDrawer } from './drawer'
 import { ElPopconfirm } from './popconfirm'
 import { ElEuButton } from './eu-button'
+import { ElEuTable } from './eu-table'
+import { ElEutable } from './EuTable'
 
 export interface InstallationOptions {
   locale: any,
@@ -348,3 +350,9 @@ export class Popconfirm extends ElPopconfirm {}
 
 /** EuButton Component */
 export class EuButton extends ElEuButton {}
+
+/** EuTable Component */
+export class EuTable extends ElEuTable {}
+
+/** Eutable Component */
+export class Eutable extends ElEutable {}

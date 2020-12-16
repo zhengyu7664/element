@@ -295,6 +295,10 @@
             {
               "path": "/eu-button",
               "title": "EuButton 按钮"
+            },
+            {
+              "path": "/eu-table",
+              "title": "EuTable 表格"
             }
           ]
         }
@@ -597,6 +601,10 @@
             {
               "path": "/eu-button",
               "title": "EuButton"
+            },
+            {
+              "path": "/eu-table",
+              "title": "EuTable"
             }
           ]
         }
@@ -899,6 +907,10 @@
             {
               "path": "/eu-button",
               "title": "EuButton"
+            },
+            {
+              "path": "/eu-table",
+              "title": "EuTable"
             }
           ]
         }
@@ -1201,6 +1213,10 @@
             {
               "path": "/eu-button",
               "title": "EuButton"
+            },
+            {
+              "path": "/eu-table",
+              "title": "EuTable"
             }
           ]
         }

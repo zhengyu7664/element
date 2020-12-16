@@ -81,5 +81,6 @@
   "avatar": "./packages/avatar/index.js",
   "drawer": "./packages/drawer/index.js",
   "popconfirm": "./packages/popconfirm/index.js",
-  "eu-button": "./packages/eu-button/index.js"
+  "eu-button": "./packages/eu-button/index.js",
+  "eu-table": "./packages/eu-table/index.js"
 }
