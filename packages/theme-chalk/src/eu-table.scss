@@ -10,15 +10,21 @@
             background-color: transparent;
         }
     }
-    table.el-table__body {
+    .el-table__body {
         border-collapse:separate;
         border-spacing: 0px 10px;
+        tr {
+            &:hover td{
+                background-color: #e7e9ec;
+            }
+        }
     }
     &::before {
         width: 0;
     }
     tr {
         background-color: #F4F7F9;
+        
     }
     th.is-leaf,td {
         border-bottom: none;
