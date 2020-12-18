@@ -2,4 +2,43 @@
 @import "common/var";
 
 @include b(eu-table) {
+    padding: 10px;
+    color: #231815;
+    thead {
+        color: #8090A2;
+        tr,th {
+            background-color: transparent;
+        }
+    }
+    table.el-table__body {
+        border-collapse:separate;
+        border-spacing: 0px 10px;
+    }
+    &::before {
+        width: 0;
+    }
+    tr {
+        background-color: #F4F7F9;
+    }
+    th.is-leaf,td {
+        border-bottom: none;
+    }
+    @include m(dark) {
+        background-color: #231815;
+        color: white;
+        .el-table__body{
+            tr {
+                background-color: #202B35;
+                &:hover td{
+                    background-color: #54708a;
+                }
+            }
+        }
+        
+        thead {
+            color: #566777;
+        }
+    }
+    
+    
 }
